@@ -1,4 +1,5 @@
 <template>
+  <About class="test-about" />
   <h1>{{ msg }}</h1>
 
   <p>
@@ -24,21 +25,37 @@
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
   </p>
+  <button disabled="">123456</button>
 </template>
 
 <script lang="ts">
+  console.log('hello ---')
+  import About from '@/components/About.vue'
+  import repository from '@/api/repositories'
   import { ref, defineComponent } from 'vue'
+  import { log } from 'util'
+  import { warn } from 'console'
   export default defineComponent({
     name: 'Hello',
+    components: { About },
     props: {
       msg: {
         type: String,
         required: false
       }
     },
-    setup: () => {
-      const count = ref(0)
+    setup() {
+      console.log('setup hello ---')
+      const getUserRepositories = async () => {
+        const test = await repository.fetchUserRepositoryTest({})
+        console.log(48, 'test::', test)
+      }
+      getUserRepositories()
+      const count = ref(1000)
       return { count }
+    },
+    mounted() {
+      console.log('hello')
     }
   })
 </script>

@@ -33,7 +33,9 @@
   const navigations: Navigation[] = [
     { path: '/', name: 'home' },
     { path: '/about', name: 'about' },
-    { path: '/test', name: 'test' }
+    { path: '/test', name: 'test' },
+    { path: '/set-up', name: 'set-up' },
+    { path: '/for', name: 'for' }
   ]
   export default defineComponent({
     name: 'App',

@@ -4,6 +4,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import Hello from '@/components/Hello.vue'
 import About from '@/components/About.vue'
 import Test from '@/pages/Test.vue'
+import SetUp from '@/pages/SetUp.vue'
+import For from '@/pages/For.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -11,7 +13,9 @@ import Test from '@/pages/Test.vue'
 const routes = [
   { path: '/', component: Hello },
   { path: '/about', component: About },
-  { path: '/test', component: Test }
+  { path: '/test', component: Test },
+  { path: '/set-up', component: SetUp },
+  { path: '/for', component: For }
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置

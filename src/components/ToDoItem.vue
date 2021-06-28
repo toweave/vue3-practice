@@ -1,28 +1,29 @@
 <template>
-  <h1>{{ msg }}</h1>
-  <h2 :class="$attrs.class">{{ 'About' }}</h2>
+  <li>
+    {{ title }}
+    <button @click="$emit('remove')">Remove</button>
+  </li>
 </template>
 
 <script lang="ts">
-  console.log('about ---')
-  import { log } from 'console'
   import { ref, defineComponent } from 'vue'
   export default defineComponent({
-    name: 'About',
+    name: 'Hello',
+    components: {},
     props: {
-      msg: {
+      title: {
         type: String,
         required: false,
-        default: 'about page'
+        default: ''
       }
     },
-    setup: () => {
-      console.log('setup about ---')
-      const count = ref(0)
+    emits: ['remove'],
+    setup() {
+      const count = ref(1000)
       return { count }
     },
     mounted() {
-      console.log('about')
+      console.log('hello')
     }
   })
 </script>
