@@ -10,11 +10,12 @@
 </template>
 
 <script lang="ts">
+  // ComponentOptions
   export interface Article {
     title: string
     author: string
   }
-  import { ref, defineComponent } from 'vue'
+  import { ref, defineComponent, ComponentOptions } from 'vue'
   export default defineComponent({
     inheritAttrs: false,
     name: 'Grandson',
@@ -48,9 +49,9 @@
     inject: ['user', 'todoLength'],
     methods: {},
     mounted() {
-      console.log(`Injected property: ${this.user}`)
+      console.log(`Injected property: ${this.aliasUser}`)
     }
-  })
+  } as ComponentOptions)
 </script>
 
 <style scoped></style>

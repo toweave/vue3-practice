@@ -17,6 +17,9 @@ import Form from '@/pages/Form.vue'
 import Slot from '@/pages/Slot.vue'
 import Provide from '@/pages/Provide.vue'
 import Transition from '@/pages/Transition.vue'
+import Template from '@/pages/Template.vue'
+import Mixin from '@/pages/Mixin.vue'
+import Directive from '@/pages/Directive.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -24,7 +27,6 @@ import Transition from '@/pages/Transition.vue'
 const routes = [
   { path: '/', component: Hello },
   { path: '/About', component: About },
-  { path: '/Test', component: Test },
   { path: '/SetUp', component: SetUp },
   { path: '/For', component: For },
   { path: '/Model', component: Model },
@@ -33,7 +35,11 @@ const routes = [
   { path: '/Form', component: Form },
   { path: '/Slot', component: Slot },
   { path: '/Provide', component: Provide },
-  { path: '/Transition', component: Transition }
+  { path: '/Transition', component: Transition },
+  { path: '/Template', component: Template },
+  { path: '/Mixin', component: Mixin },
+  { path: '/Directive', component: Directive },
+  { path: '/Test', component: Test }
 ]
 
 // 3. 创建路由实例并传递 `routes` 配置
