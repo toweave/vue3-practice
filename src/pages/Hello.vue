@@ -1,4 +1,6 @@
 <template>
+  <div>{{ $options.name }}</div>
+  <hr />
   <About class="test-about" />
   <h1>{{ msg }}</h1>
 
@@ -30,11 +32,9 @@
 
 <script lang="ts">
   console.log('hello ---')
-  import About from '@/components/About.vue'
+  import About from '@/pages/About.vue'
   import repository from '@/api/repositories'
   import { ref, defineComponent } from 'vue'
-  import { log } from 'util'
-  import { warn } from 'console'
   export default defineComponent({
     name: 'Hello',
     components: { About },

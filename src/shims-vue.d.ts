@@ -1,6 +1,12 @@
+declare module 'vue'
+
+declare module 'gsap/all'
+
 declare module '*.vue' {
-  import { DefineComponent } from 'vue'
+  import Vue, { DefineComponent, ComponentOptions } from 'vue'
   const component: DefineComponent<{}, {}, any>
-  export default component
+  const componentOptions: ComponentOptions<{}, {}, any>
+  export { Vue, component, componentOptions }
+  // export default componentOptions
 }
-export declare function fetchUserRepositories(): Promise
+export declare function fetchUserRepositories(): any

@@ -1,4 +1,6 @@
 <template>
+  <div>{{ $options.name }}</div>
+  <hr />
   <h1>{{ msg }}</h1>
   <div>{{ counter }}</div>
   <div>{{ repositories }}</div>

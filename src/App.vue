@@ -24,19 +24,21 @@
     name: string
     path: string
   }
-
+  import router from '@/router'
   import { defineComponent } from 'vue'
-  // import HelloWorld from '@/components/HelloWorld.vue'
-  // const path = computed(() => {
-  //   return this.$route.path
-  // })
-  const navigations: Navigation[] = [
-    { path: '/', name: 'home' },
-    { path: '/about', name: 'about' },
-    { path: '/test', name: 'test' },
-    { path: '/set-up', name: 'set-up' },
-    { path: '/for', name: 'for' }
-  ]
+  const { options } = router
+  const navigations: Navigation[] = options.routes.map((element) => {
+    let name: string = ''
+    if (element.path === '/') {
+      name = 'Home'
+    } else {
+      name = element.path.slice(1)
+    }
+    return {
+      path: element.path,
+      name
+    }
+  })
   export default defineComponent({
     name: 'App',
     components: {
@@ -109,6 +111,7 @@
       border-right: 1px solid #f6f6f6;
     }
     &__right {
+      width: 100%;
       padding: 1em;
     }
   }

@@ -1,4 +1,6 @@
 <template>
+  <div>{{ $options.name }}</div>
+  <hr />
   <h1>{{ msg }}</h1>
   <h2 :class="$attrs.class">{{ 'About' }}</h2>
 </template>

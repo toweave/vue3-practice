@@ -1,20 +1,41 @@
 <template>
-  <li>
-    {{ title }}
-    <button @click="$emit('remove')">Remove</button>
-  </li>
+  <div>
+    <div>{{ creator }}</div>
+    <div>
+      <input v-model="creator" type="text" />
+    </div>
+  </div>
+
+  <div>
+    <ul>
+      <li>{{ article.title }}</li>
+      <li>{{ article.author }}</li>
+    </ul>
+    <div>
+      <input v-model="article.author" type="text" />
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
+  export interface Article {
+    title: string
+    author: string
+  }
   import { ref, defineComponent } from 'vue'
   export default defineComponent({
-    name: 'ToDoItem',
+    name: 'Prop',
     components: {},
     props: {
-      title: {
+      creator: {
         type: String,
         required: false,
-        default: ''
+        default: 'toweave'
+      },
+      article: {
+        type: Object,
+        required: false,
+        default: () => ({})
       }
     },
     // emits: ['remove'],
@@ -22,9 +43,7 @@
       const count = ref(1000)
       return { count }
     },
-    mounted() {
-      console.log('hello')
-    }
+    mounted() {}
   })
 </script>
 
