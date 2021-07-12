@@ -20,6 +20,10 @@ import Transition from '@/pages/Transition.vue'
 import Template from '@/pages/Template.vue'
 import Mixin from '@/pages/Mixin.vue'
 import Directive from '@/pages/Directive.vue'
+import Teleport from '@/pages/Teleport.vue'
+import Plugin from '@/pages/Plugin.vue'
+import Reactive from '@/pages/Reactive.vue'
+import ECharts from '@/pages/ECharts.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -39,6 +43,10 @@ const routes = [
   { path: '/Template', component: Template },
   { path: '/Mixin', component: Mixin },
   { path: '/Directive', component: Directive },
+  { path: '/Teleport', component: Teleport },
+  { path: '/Plugin', component: Plugin },
+  { path: '/Reactive', component: Reactive },
+  { path: '/ECharts', component: ECharts },
   { path: '/Test', component: Test }
 ]
 

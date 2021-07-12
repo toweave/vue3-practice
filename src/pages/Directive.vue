@@ -32,7 +32,8 @@
       format: {
         // 指令的定义
         mounted(el, instance) {
-          const { value, arg } = instance
+          console.log(35, instance)
+          const { value, arg = 0 } = instance
           el.innerHTML = MathDecimalMark(value, Number(arg))
         },
         updated(el, instance) {
@@ -43,6 +44,7 @@
       fixed: {
         // 指令的定义
         mounted(el, instance) {
+          console.log(47, instance)
           const { value, arg } = instance
           el.innerHTML = MathRound(value, Number(arg))
         },

@@ -5,7 +5,7 @@
   <input v-model.lazy="message" @input="hanldeInputEvent" @change="hanldeChangeEvent" placeholder="edit me" />
   <p>Message is: {{ message }}</p>
   <div>
-    <select v-model="selected" placeholder="select one" style="width: 120px" multiple>
+    <select class="selected" v-model="selected" placeholder="select one" style="width: 120px" multiple>
       <!-- <option value="">Please select one</option> -->
       <option>A</option>
       <option>B</option>
@@ -52,20 +52,19 @@
   })
 </script>
 
-<style scoped>
-  a {
-    color: #42b983;
+<style lang="scss" scoped>
+  selected:focus {
+    background-color: red !important;
+    &:-internal-list-box {
+      background-color: red !important;
+    }
   }
-
-  label {
-    margin: 0 0.5em;
-    font-weight: bold;
-  }
-
-  code {
-    background-color: #eee;
-    padding: 2px 4px;
-    border-radius: 4px;
-    color: #304455;
+  selected {
+    &:-internal-list-box option:checked {
+      background-color: red !important;
+    }
+    &:-internal-list-box {
+      background-color: red !important;
+    }
   }
 </style>
