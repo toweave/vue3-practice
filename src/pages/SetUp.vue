@@ -11,8 +11,8 @@
 
 <script lang="ts">
   import { ref, defineComponent, onMounted, computed, watch } from 'vue'
-  import repository from '@/api/repositories'
-  console.log(8, repository)
+  import { fetchUserRepositories } from '@/api/repositories'
+  console.log(8, fetchUserRepositories)
 
   const counter = ref(0)
   const twiceTheCounter = computed(() => counter.value * 2)
@@ -42,7 +42,7 @@
 
       const repositories: any = ref([])
       const getUserRepositories = async () => {
-        repositories.value = await repository.fetchUserRepositories(props.user)
+        repositories.value = await fetchUserRepositories(props.user)
         console.log(50, repositories.value)
       }
       watch(counter, (newValue, oldValue) => {

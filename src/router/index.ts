@@ -10,6 +10,7 @@ import About from '@/pages/About.vue'
 import Test from '@/pages/Test.vue'
 import SetUp from '@/pages/SetUp.vue'
 import For from '@/pages/For.vue'
+import Fetch from '@/pages/Fetch.vue'
 import Model from '@/pages/Model.vue'
 import Component from '@/pages/Component.vue'
 import Event from '@/pages/Event.vue'
@@ -24,6 +25,7 @@ import Teleport from '@/pages/Teleport.vue'
 import Plugin from '@/pages/Plugin.vue'
 import Reactive from '@/pages/Reactive.vue'
 import ECharts from '@/pages/ECharts.vue'
+import Box from '@/pages/Box.vue'
 
 // 2. 定义一些路由
 // 每个路由都需要映射到一个组件。
@@ -33,6 +35,7 @@ const routes = [
   { path: '/About', component: About },
   { path: '/SetUp', component: SetUp },
   { path: '/For', component: For },
+  { path: '/Fetch', component: Fetch },
   { path: '/Model', component: Model },
   { path: '/Component', component: Component },
   { path: '/Event', component: Event },
@@ -47,6 +50,7 @@ const routes = [
   { path: '/Plugin', component: Plugin },
   { path: '/Reactive', component: Reactive },
   { path: '/ECharts', component: ECharts },
+  { path: '/Box', component: Box },
   { path: '/Test', component: Test }
 ]
 

@@ -33,7 +33,7 @@
 <script lang="ts">
   console.log('hello ---')
   import About from '@/pages/About.vue'
-  import repository from '@/api/repositories'
+  import { fetchUserRepositoryTest } from '@/api/repositories'
   import { ref, defineComponent } from 'vue'
   export default defineComponent({
     name: 'Hello',
@@ -47,7 +47,7 @@
     setup() {
       console.log('setup hello ---')
       const getUserRepositories = async () => {
-        const test = await repository.fetchUserRepositoryTest({})
+        const test = await fetchUserRepositoryTest({})
         console.log(48, 'test::', test)
       }
       getUserRepositories()

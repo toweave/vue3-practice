@@ -142,4 +142,21 @@
       text-decoration: none;
     }
   }
+
+  button {
+    background: #d93419;
+    border-radius: 4px;
+    display: inline-block;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 20px 10px 0 0;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
 </style>

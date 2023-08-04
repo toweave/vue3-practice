@@ -7,7 +7,6 @@
 
 <script lang="ts">
   console.log('about ---')
-  import { log } from 'console'
   import { ref, defineComponent } from 'vue'
   export default defineComponent({
     name: 'About',

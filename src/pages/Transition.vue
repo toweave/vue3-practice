@@ -125,22 +125,6 @@
 </script>
 
 <style lang="scss" scoped>
-  button {
-    background: #d93419;
-    border-radius: 4px;
-    display: inline-block;
-    border: none;
-    padding: 0.75rem 1rem;
-    margin: 20px 10px 0 0;
-    text-decoration: none;
-    color: #ffffff;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
   .shake {
     animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
     transform: translate3d(0, 0, 0);
