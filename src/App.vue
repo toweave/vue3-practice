@@ -158,5 +158,9 @@
     text-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
+
+    &:disabled {
+      background: #ea715d;
+    }
   }
 </style>

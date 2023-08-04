@@ -22,10 +22,12 @@ const RandomRange = (min = 0, max = 100) => {
 
 class Queue {
   private gather: any[]
+  private uniqueId: number
   public is_order: boolean
   public is_completed: boolean
   constructor() {
     this.gather = [];
+    this.uniqueId = 0;
     this.is_order = true;
     this.is_completed = true;
   }
@@ -44,14 +46,26 @@ class Queue {
   }
 
   // 订阅
-  async subscribe (fn: any) {
+  async subscribe (fn: any, ...args) {
     const fn_id = Date.now();
     this.is_completed = false;
     this.gather.push(fn_id);
-    const res = await fn('test', fn_id);
-    this.unsubscribe(res.fn_id);
+    const res = await fn(args[0]);
+    this.unsubscribe(fn_id);
     return res
     // this.gather.push(fn_id);
+  }
+
+  withUniqueId(fn: any) {
+    const that = this;
+    return async function(...args) {
+      console.log("args ::", args)
+      const fn_id = Date.now();
+      that.gather.push(fn_id);
+      const res = await fn.apply(that, args);
+      that.unsubscribe(fn_id);
+      return res;
+    };
   }
 }
 

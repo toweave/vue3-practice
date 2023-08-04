@@ -17,26 +17,26 @@ const fetchUserRepositoryTest = async (data: any) => {
   //   return [1, 2, 3]
 }
 
-const fetchSomethingWithTime = async (data: any, fn_id: any) => {
+const fetchSomethingWithTime = async (data: any) => {
   const time = await SleepTime(2000, 5000)
   return new Promise((resolve, reject) => {
-    resolve({ time: time, fn_id: fn_id })
+    resolve({ time: time, data: data })
   })
   //   return await Promise.resolve([1, 2, 3])
   //   return [1, 2, 3]
 }
-const fetchSomethingWithTime1 = async (data: any, fn_id: any) => {
+const fetchSomethingWithTime1 = async (data: any) => {
   const time = await SleepTime(2000, 5000)
   return new Promise((resolve, reject) => {
-    resolve({ time: time, fn_id: fn_id })
+    resolve({ time: time, data: data })
   })
   //   return await Promise.resolve([1, 2, 3])
   //   return [1, 2, 3]
 }
-const fetchSomethingWithTime2 = async (data: any, fn_id: any) => {
+const fetchSomethingWithTime2 = async (data: any) => {
   const time = await SleepTime(2000, 5000)
   return new Promise((resolve, reject) => {
-    resolve({ time: time, fn_id: fn_id })
+    resolve({ time: time, data: data })
   })
   //   return await Promise.resolve([1, 2, 3])
   //   return [1, 2, 3]
