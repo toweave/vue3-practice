@@ -46,7 +46,7 @@ class Queue {
   }
 
   // 订阅
-  async subscribe (fn: any, ...args) {
+  async subscribe (fn: any, ...args: any[]) {
     const fn_id = Date.now();
     this.is_completed = false;
     this.gather.push(fn_id);
@@ -58,7 +58,7 @@ class Queue {
 
   withUniqueId(fn: any) {
     const that = this;
-    return async function(...args) {
+    return async function(...args: any[]) {
       console.log("args ::", args)
       const fn_id = Date.now();
       that.gather.push(fn_id);
